@@ -1,0 +1,61 @@
+/* Remove default margin and padding from body */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: absolute; /* Make the navbar overlay the home background */
+  top: 0;
+  left: 0;
+  width: 1488px; /* Make the navbar span the full width */
+  background-color: transparent; /* Fully transparent background */
+  z-index: 10; /* Ensure it stays on top of other elements */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Light border for the subtle light bar */
+}
+
+/* Citély text */
+.navbar-logo .logo-text {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 32px; /* Adjust size if needed */
+  font-weight: bold;
+  color: #ffb6c1; /* Pink color */
+  cursor: pointer;
+  margin-top: 10px; /* Align with navbar items */
+}
+
+/* Navbar links container */
+.navbar-links {
+  display: flex;
+  justify-content: space-evenly; /* Space links evenly across the width */
+  align-items: center;
+  flex-grow: 1; /* Make sure the navbar links take available space */
+}
+
+/* Individual link item styling */
+.navbar-item {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 20px;
+  font-weight: bold;
+  color: #f6f4f0; /* Default text color */
+  cursor: pointer;
+  text-transform: uppercase; /* Capitalize all letters for consistency */
+  margin: 0 15px; /* Horizontal space between items */
+}
+
+/* Hover effect for link items */
+.navbar-item:hover {
+  color: #ffb6c1; /* Lovely baby pink hover color */
+  text-decoration: none;
+}
+
+/* Ensure no space on the right side of the last item */
+.navbar-links .navbar-item:last-child {
+  margin-right: 0;
+}

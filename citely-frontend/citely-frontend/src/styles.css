@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+app-root {
+  display: block;
+  height: 100%; /* Ensure the root component spans the full viewport */
+}

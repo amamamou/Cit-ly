@@ -1,0 +1,79 @@
+/* Ensure the body takes full height */
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Section for the home content */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #f6f4f0; /* Soft color for the text */
+  background-image: url('src/assets/bg02.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  height: 100%; /* Adjust height as needed */
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for a floating effect */
+}
+
+/* Title styling */
+.title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #f6f4f0;
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  color: #ffb6c1; /* Baby pink color for subtitle */
+}
+
+/* Container for the buttons */
+.cta-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/* Button styling */
+.cta-btn {
+  background-color: transparent;
+  border: 2px solid #ffb6c1; /* Soft baby pink border */
+  color: #ffb6c1;
+  font-size: 18px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: #ffb6c1;
+  color: #fff;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .cta-btn {
+    font-size: 16px;
+  }
+}
