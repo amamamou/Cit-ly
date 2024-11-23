@@ -7,6 +7,8 @@ body {
   align-items: center;
   background-color: #f0f0f0;
   font-family: 'Playfair Display', serif;
+  font-weight: bold;
+
 }
 
 /* Section for the home content */
@@ -37,23 +39,29 @@ body {
 
 /* Small title styling */
 .title-small {
-  font-size: 16px;
+  font-family: 'Merriweather', serif; /* Readable and professional */
+
+  font-size: 18px; /* Increase font size for consistency with the main title */
   font-weight: normal;
   color: white;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
+  letter-spacing: 1.5px; /* Slightly wider spacing */
+  margin-bottom: 0; /* Remove default margin to bring it closer to the main title */
+  line-height: 1.2; /* Adjust line spacing */
+  text-transform: uppercase; /* Capitalize all letters for consistency */
+
 }
 
 /* Main title styling */
 .title-main {
-  font-size: 80px;
-  font-family: 'Giaza', sans-serif; /* Similar to Giaza font */
+  font-size: 60px; /* Reduce font size to match the small title's width */
+  font-family: 'Anton', sans-serif; /* Apply Anton font */
   font-weight: bold;
   color: white;
-  letter-spacing: 2px;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  letter-spacing: 1.5px; /* Match the small title's spacing */
+  line-height: 1.2; /* Ensure consistent spacing */
+  margin-top: 5px; /* Add minimal margin to balance alignment */
 }
+
 
 /* Search Bar Container */
 .search-container {
@@ -62,15 +70,21 @@ body {
 }
 
 .search-bar {
-  font-size: 18px;
-  padding: 12px 24px 12px 40px; /* Space for icon */
+  font-size: 15px; /* Larger text size */
+  text-align: center; /* Center the text inside the search bar */
+  padding: 16px 24px 16px 24px; /* Increase padding for a larger overall appearance */
   border: none;
   border-radius: 25px;
-  width: 300px;
-  background-color: white;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Increase width */
+  background-color: #f0efef; /* Off-white background (blanc cassé) */
+  color: #333; /* Darker text color for contrast */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for emphasis */
 }
+
+.search-bar::placeholder {
+  color: #aaa; /* Subtle placeholder text color */
+}
+
 
 /* Search Icon inside the search bar */
 .search-icon {
@@ -78,7 +92,7 @@ body {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: #000; /* Soft pink */
+  color:rgb(114, 86, 59); /* Soft pink */
 }
 
 .search-icon i {
@@ -94,9 +108,9 @@ body {
 }
 
 .line {
-  width: 100px;
+  width: 180px;
   height: 1px;
-  background-color: white;
+  background-color: #61363c;
   margin: 0 10px;
 }
 
@@ -108,10 +122,11 @@ body {
 
 /* Button styling */
 .cta-btn {
-  background-color: #ffb6c1; /* Pink background */
-  border: 2px solid #ffb6c1; /* Pink border */
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid #61363c; /* Pink border */
   color: white;
-  font-size: 18px;
+  font-size: 15px; /* Larger text size */
   padding: 12px 24px;
   cursor: pointer;
   border-radius: 0; /* No border-radius */
@@ -119,9 +134,9 @@ body {
 }
 
 .cta-btn:hover {
-  background-color: transparent;
+  background-color: #61363c; /* Pink background */
   color: white;
-  border: 2px solid #ffb6c1;
+  border: 2px solid #61363c;
 }
 
 /* Responsive design for mobile */

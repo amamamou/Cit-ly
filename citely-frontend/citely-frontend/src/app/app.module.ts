@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { HttpClientModule } from '@angular/common/http';  // Import HttpClientModule
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { AuthorsComponent } from './authors/authors.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule  // Add HttpClientModule here
+
   ],
   providers: [],
   bootstrap: [AppComponent]

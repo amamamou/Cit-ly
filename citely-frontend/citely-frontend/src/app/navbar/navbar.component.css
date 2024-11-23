@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Great Vibes', cursive; /* Elegant script for decorative purposes */
 }
 
 /* Navbar container */
@@ -48,8 +49,32 @@ body {
   text-transform: uppercase; /* Capitalize all letters for consistency */
   margin: 0 15px; /* Horizontal space between items */
   display: inline-block; /* Ensure it's treated as a block for padding */
-  padding: 5px 15px; /* Adjust padding */
+  padding: 5px 105px; /* Adjust padding */
+  position: relative; /* Allows adding pseudo-elements */
   transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Add hover area with a pseudo-element */
+.navbar-item::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Extend the hoverable area upwards */
+  left: -10px; /* Extend to the left */
+  right: -10px; /* Extend to the right */
+  bottom: -10px; /* Extend downwards */
+  z-index: -1; /* Keep it behind the actual text */
+  background-color: transparent; /* Transparent background to ensure it's invisible */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for navbar items */
+.navbar-item:hover::before {
+  background-color: transparent; /* Keep it invisible */
+}
+
+.navbar-item:hover, .navbar-item a:hover {
+  color: #ffb6c1; /* Lovely baby pink hover color */
+  text-decoration: none; /* Remove any underline */
 }
 
 /* When the navbar item is a link (anchor tag) */
@@ -65,12 +90,6 @@ body {
 .navbar-item a:focus, .navbar-item a:active {
   color: inherit;
   text-decoration: none;
-}
-
-/* Hover effect for link items */
-.navbar-item:hover, .navbar-item a:hover {
-  color: #ffb6c1; /* Lovely baby pink hover color */
-  text-decoration: none; /* Remove any underline */
 }
 
 /* Ensure no space on the right side of the last item */
