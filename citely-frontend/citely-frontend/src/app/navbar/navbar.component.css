@@ -47,15 +47,48 @@ body {
   cursor: pointer;
   text-transform: uppercase; /* Capitalize all letters for consistency */
   margin: 0 15px; /* Horizontal space between items */
+  display: inline-block; /* Ensure it's treated as a block for padding */
+  padding: 5px 15px; /* Adjust padding */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* When the navbar item is a link (anchor tag) */
+.navbar-item a {
+  color: inherit; /* Inherit the color of the parent */
+  text-decoration: none; /* Remove default link underline */
+  display: inline-block; /* Ensures that padding applies */
+  width: 100%; /* Ensure anchor takes full width */
+  height: 100%; /* Allow padding to affect the hover area */
+}
+
+/* Remove purple and underline on focus or click */
+.navbar-item a:focus, .navbar-item a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Hover effect for link items */
-.navbar-item:hover {
+.navbar-item:hover, .navbar-item a:hover {
   color: #ffb6c1; /* Lovely baby pink hover color */
-  text-decoration: none;
+  text-decoration: none; /* Remove any underline */
 }
 
 /* Ensure no space on the right side of the last item */
 .navbar-links .navbar-item:last-child {
   margin-right: 0;
+}
+
+/* Fix the issue with the logo link */
+.logo-link {
+  color: inherit; /* Inherit the color from .logo-text */
+  text-decoration: none; /* Remove underline */
+}
+
+.logo-link:focus, .logo-link:active {
+  color: inherit; /* Prevent color change */
+  text-decoration: none; /* Prevent underline */
+}
+
+.logo-link:hover {
+  color: inherit; /* Keep color the same on hover */
 }

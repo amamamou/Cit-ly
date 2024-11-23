@@ -16,62 +16,124 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #f6f4f0; /* Soft color for the text */
-  background-image: url('src/assets/bg02.jpg'); /* Background image */
-  background-size: cover;
-  background-position: center;
-  height: 100%; /* Adjust height as needed */
+  color: white; /* All text in white */
+  position: relative;
+  height: 100vh;
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for a floating effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-/* Title styling */
-.title {
-  font-size: 36px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #f6f4f0;
+/* Video background styling */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Subtitle styling */
-.subtitle {
-  font-size: 24px;
-  margin-bottom: 30px;
+/* Small title styling */
+.title-small {
+  font-size: 16px;
   font-weight: normal;
-  color: #ffb6c1; /* Baby pink color for subtitle */
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
 
-/* Container for the buttons */
-.cta-container {
+/* Main title styling */
+.title-main {
+  font-size: 80px;
+  font-family: 'Giaza', sans-serif; /* Similar to Giaza font */
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Search Bar Container */
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  font-size: 18px;
+  padding: 12px 24px 12px 40px; /* Space for icon */
+  border: none;
+  border-radius: 25px;
+  width: 300px;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Icon inside the search bar */
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000; /* Soft pink */
+}
+
+.search-icon i {
+  font-size: 15px;
+}
+
+/* OR Line Container */
+.or-container {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.line {
+  width: 100px;
+  height: 1px;
+  background-color: white;
+  margin: 0 10px;
+}
+
+.or-text {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
 }
 
 /* Button styling */
 .cta-btn {
-  background-color: transparent;
-  border: 2px solid #ffb6c1; /* Soft baby pink border */
-  color: #ffb6c1;
+  background-color: #ffb6c1; /* Pink background */
+  border: 2px solid #ffb6c1; /* Pink border */
+  color: white;
   font-size: 18px;
   padding: 12px 24px;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 0; /* No border-radius */
   transition: all 0.3s ease-in-out;
 }
 
 .cta-btn:hover {
-  background-color: #ffb6c1;
-  color: #fff;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #ffb6c1;
 }
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
-  .title {
-    font-size: 28px;
+  .title-main {
+    font-size: 50px;
   }
-  .subtitle {
-    font-size: 20px;
+  .title-small {
+    font-size: 14px;
+  }
+  .search-bar {
+    width: 250px;
   }
   .cta-btn {
     font-size: 16px;

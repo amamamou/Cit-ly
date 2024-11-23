@@ -1,0 +1,51 @@
+/* Style for the authors header section */
+.authors-header {
+  background-image: url('src/assets/bg28.jpg'); /* Make sure to place the image in the assets folder */
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center; /* Center the image */
+  height: 30vh; /* 30% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.authors-title {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 150px;
+  color: white; /* Set text color to white for visibility */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add shadow for readability */
+}
+
+/* Styling for the authors list */
+.authors-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.authors-container h2 {
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+}
+
+.authors-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.authors-container li {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.authors-container li h3 {
+  font-weight: bold;
+  color: #ffb6c1;
+}
+
+.authors-container li p {
+  color: #555;
+}
