@@ -1,1 +1,4 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+citely-frontend/citely-frontend/src/assets/3.mp4 filter=lfs diff=lfs merge=lfs -text
+citely-frontend/Citely/src/assets/3.mp4 filter=lfs diff=lfs merge=lfs -text
+citely-frontend/Citely/src/assets/2.mp4 filter=lfs diff=lfs merge=lfs -text
