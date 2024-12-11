@@ -1,0 +1,110 @@
+/* Style for the collection header */
+.collection-header {
+  position: relative;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* Styling for the quotes section */
+.quotes-section {
+  padding: 40px 20px; /* More spacious padding */
+  margin-top: -50px; /* To lift the quotes section up a bit */
+  background-color: #fafafa; /* Soft background color */
+  border-radius: 0px; /* Slight rounding of corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.quotes-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Lora', serif; /* A professional serif font */
+  text-align: center; /* Center the quotes title */
+  font-weight: 600; /* Slightly heavier font weight */
+}
+
+.quotes-container ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid layout for cards */
+  gap: 30px; /* Space between cards */
+  margin-top: 40px;
+}
+
+.quotes-container li {
+  font-family: 'Georgia', serif; /* Elegant, classic serif font */
+  color: #333; /* Darker text for professional readability */
+  font-style: italic; /* Italicize to indicate it's a quote */
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px; /* Rounded corners for each card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* Positioning for the background image */
+}
+
+/* Add background image to the top-left corner of the card */
+.quotes-container li::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 50px; /* Adjust the size of the image */
+  height: 50px; /* Adjust the size of the image */
+  background-image: url('src/assets/quote.png'); /* Path to the image */
+  background-size: contain; /* Ensures the image scales proportionally */
+  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+}
+
+/* Hover effect */
+.quotes-container li:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight increase in shadow for hover */
+}
+
+/* Professional Citation Look */
+.quotes-container li p {
+  font-size: 1.2rem; /* Larger font size for readability */
+  line-height: 1.8; /* Improved line spacing for better readability */
+  color: #555; /* Darker text for professional readability */
+  font-family: 'Georgia', serif; /* Elegant, classic serif font */
+  font-style: italic; /* Italicize to indicate it's a quote */
+  margin-top: 20px;
+  text-align: center; /* Center align the citation for a more polished look */
+  position: relative;
+  padding-left: 30px; /* Indent the text for a more classic citation feel */
+}
+
+/* Style for the author's name at the bottom of each card */
+.author-name {
+  position: absolute;
+  bottom: 15px; /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the name horizontally */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem; /* Font size for the author's name */
+  color: #dba6ae; /* Pink color */
+  font-weight: 800; /* Slight boldness for the name */
+  text-align: center; /* Ensures the text is centered */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for better readability */
+  border-radius: 8px; /* Rounded corners */
+}

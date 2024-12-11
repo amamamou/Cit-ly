@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <!-- Citély Text -->
+  <div class="navbar-logo">
+    <span class="logo-text">
+      <a routerLink="/" class="logo-link">Citély</a>
+    </span>
+  </div>
+
+  <!-- Links -->
+  <div class="navbar-links">
+    <div class="navbar-item"><a routerLink="/authors">Authors</a></div>
+    <div class="navbar-item"><a routerLink="/collections">Collections</a></div>
+    <div class="navbar-item"><a routerLink="/quotes">Quotes</a></div>
+    <div class="navbar-item" style="display: flex; align-items: center; gap: 8px;">
+      <!-- Notification Icon -->
+      <a routerLink="/notifications">
+        <img src="assets/icons/noti.png" alt="Notifications" style="width: 18px; height: 18px;" />
+      </a>
+      <!-- User Icon -->
+      <a routerLink="/login">
+        <img src="assets/icons/user.png" alt="Login" style="width: 18px; height: 20px;" />
+      </a>
+    </div>
+  </div>
+</nav>

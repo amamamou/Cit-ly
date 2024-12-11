@@ -1,0 +1,73 @@
+<section class="collection-header" *ngIf="collectionName">
+  <div class="bg-image" [ngStyle]="{
+      'background-image': 'url(assets/collections/' + collectionImage + ')',
+      'position': 'relative',
+      'height': '300px',
+      'background-size': 'cover',
+      'background-repeat': 'no-repeat',
+      'background-position': 'center center',
+      'color': 'white',
+      'display': 'flex',
+      'justify-content': 'center',
+      'align-items': 'center',
+      'padding': '20px',
+      'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.5)'
+    }">
+
+  </div>
+</section>
+
+<section class="quotes-section">
+  <div class="quotes-container" *ngIf="quotes.length > 0">
+    <h2 [ngStyle]="{
+        'font-size': '2.2rem',
+        'color': '#333',
+        'font-family': 'Lora, serif',
+        'text-align': 'center',
+        'font-weight': '600'
+      }">Quotes for {{ collectionName }}</h2>
+
+    <ul [ngStyle]="{
+        'list-style-type': 'none',
+        'padding': '0',
+        'display': 'grid',
+        'grid-template-columns': 'repeat(auto-fill, minmax(300px, 1fr))',
+        'gap': '30px',
+        'margin-top': '40px'
+      }">
+      <li *ngFor="let quote of quotes" class="quote-card">
+        <p [ngStyle]="{
+            'font-size': '1.2rem',
+            'font-style': 'italic',
+            'text-align': 'center',
+            'font-family': 'Georgia, serif',
+            'color': '#555',
+            'line-height': '1.8',
+            'max-width': '350px',
+            'margin-left': 'auto',
+            'margin-right': 'auto'
+          }">{{ quote.content }}</p>
+        <div class="author-name" [ngStyle]="{
+            'font-family': 'Roboto, sans-serif',
+            'font-size': '1rem',
+            'color': '#dba6ae',
+            'font-weight': '800',
+            'text-align': 'center',
+            'padding': '10px',
+            'background-color': 'rgba(255, 255, 255, 0.8)',
+            'border-radius': '8px'
+          }">{{ quote.author }}</div>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="quotes.length === 0">
+    <p [ngStyle]="{
+        'font-size': '1.2rem',
+        'color': '#555',
+        'font-family': 'Roboto, sans-serif',
+        'text-align': 'center',
+        'margin-top': '20px'
+      }">No quotes available for this collection.</p>
+  </div>
+</section>

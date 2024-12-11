@@ -1,0 +1,24 @@
+<section class="collections-header">
+  <!-- Background Video Section -->
+  <video class="bg-video" autoplay muted loop>
+    <source src="assets/2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h1 class="collections-title">Collections</h1>
+</section>
+
+<!-- Collection Cards -->
+<div class="card-container">
+  <div
+    class="card"
+    *ngFor="let collection of collections"
+    [style.backgroundImage]="'url(assets/collections/' + collection.image + ')'"
+    (click)="onCollectionClick(collection.name)"
+  >
+    <div class="card-overlay">
+      <h5 class="card-title">{{ collection.name }}</h5>
+      <div class="divider"></div> <!-- Light line divider -->
+      <p class="quote-count">Quotes: {{ collection.quoteCount }}</p> <!-- Displaying quoteCount -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<section
+  class="authors-header"
+  [ngStyle]="{
+    'background-image': 'url(' + getAuthorImage(author?.name) + ')',
+    'position': 'relative',
+    'height': '300px',
+    'background-size': 'cover',
+    'background-repeat': 'no-repeat',
+    'background-position': 'center center',
+    'color': 'white',
+    'display': 'flex',
+    'justify-content': 'center',
+    'align-items': 'center',
+    'padding': '20px',
+    'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.5)'
+  }"
+>
+</section>
+
+<section>
+  <div *ngIf="isLoading" class="loading"></div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <div *ngIf="author && !isLoading" class="author-detail">
+    <h1
+      [ngStyle]="{
+        'font-size': '2.2rem',
+        'margin-bottom': '10px',
+        'color': '#333',
+        'font-family': 'Merriweather, serif',
+        'text-align': 'center',
+        'font-weight': '700'
+      }"
+    >
+      {{ author.name }}
+    </h1>
+    <p
+    class="author-description"
+    [ngStyle]="{
+      'font-size': '1.2em',
+      'display': 'block',
+      'font-style': 'italic',
+      'text-align': 'center',
+      'font-family': 'Cormorant, serif',
+      'margin-top': '10px',
+      'color': '#444'
+    }"
+  >
+    {{ author.description }}
+  </p> <!-- Properly closed -->
+
+    <p
+    [ngStyle]="{
+      'font-size': '1.2em',
+      'display': 'block',
+      'font-style': 'italic',
+      'text-align': 'center',
+      'font-family': 'Cormorant, serif',
+      'margin-top': '20px',
+      'color': '#555'
+    }"
+    >
+      {{ author.bio }}
+    </p>
+
+        <h3>Citations:</h3>
+    <ul>
+      <li *ngFor="let citation of citations">
+        <p>{{ citation.content }}</p>
+        <div class="author-name">{{ author.name }}</div> <!-- Author's name centered -->
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<section class="authors-header">
+  <video class="bg-video" autoplay muted loop>
+    <source src="assets/2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h1 class="authors-title">Authors</h1>
+</section>
+
+<!-- Sorting Dropdown -->
+<!-- Sorting Radio Buttons -->
+<div class="sort-container">
+  <span class="sort-label">Sort By:</span>
+  <div class="radio-group">
+    <label>
+      <input
+        type="radio"
+        name="sort-authors"
+        value="name"
+        [(ngModel)]="selectedSort"
+        (change)="sortAuthors()" />
+      <span class="radio-label">Name</span>
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="sort-authors"
+        value="quoteCount"
+        [(ngModel)]="selectedSort"
+        (change)="sortAuthors()" />
+      <span class="radio-label">Quote Count</span>
+    </label>
+  </div>
+</div>
+
+
+<div class="authors-section">
+  <div
+    *ngFor="let author of authors"
+    class="author-card"
+    [ngStyle]="{'background-image': 'url(' + author.image + ')'}"
+    (click)="viewAuthorDetails(author.id)"> <!-- Add click event -->
+    <div class="author-info">
+      <div class="author-name">{{ author.name }}</div>
+      <div class="divider"></div> <!-- Light line divider -->
+      <div class="quote-count">Quotes: {{ author.quoteCount }}</div>
+      <div class="author-bio">{{ author.bio }}</div> <!-- More info like bio -->
+    </div>
+  </div>
+</div>
+

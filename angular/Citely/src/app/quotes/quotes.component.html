@@ -1,0 +1,21 @@
+<section class="authors-header">
+  <video class="bg-video" autoplay muted loop>
+    <source src="assets/2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h1 class="authors-title">Quotes</h1>
+</section>
+
+<section class="quotes-section">
+  <div class="quotes-container" *ngIf="quotes && quotes.length > 0">
+    <ul>
+      <li *ngFor="let quote of quotes">
+        <p>{{ quote.content }}</p>
+        <div class="author-name">{{ quote.author }}</div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="quotes && quotes.length === 0">
+    <p>No quotes available at the moment.</p>
+  </div>
+</section>
